@@ -8,6 +8,11 @@ export const HeaderContainer = styled.header`
     justify-content: center;
     align-items: center;
 
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
     background: ${(props) => props.theme.colors["base-background"]};
 
     >div{
