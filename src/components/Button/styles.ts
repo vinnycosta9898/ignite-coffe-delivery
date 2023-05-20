@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const ButtonContainer = styled.button`
     background: ${({ theme }) => theme.colors["brand-yellow"]};
