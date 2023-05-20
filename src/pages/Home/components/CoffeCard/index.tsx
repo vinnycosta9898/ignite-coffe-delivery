@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { CoffeCardContainer, CoffeDescription, CoffeName, TagsCoffe, CardFooter, CardWrapper } from './styles'
 import { RegularText, TitleText } from '../../../../components/Typegraphy/styles'
 import { QuantityInput } from '../../../../components/QuantityInput'
 import { ShoppingCart } from 'phosphor-react'
 import { priceFormatter } from '../../../../utils/priceFormatter';
+import { useCart } from '../../../../hooks/useCart';
 
 export interface Coffe{
     id: number;
@@ -18,6 +20,25 @@ interface CoffeProps{
 }
 export function CoffeCard({ coffe } : CoffeProps){
     const formattedPrice = priceFormatter(coffe.price);
+    const [quantity, setQuantity] = useState(1);
+    const { addCoffeToCart } = useCart();
+
+    function handleIncrease(){
+        setQuantity(state => state + 1);
+    }
+
+    function handleDecrease(){
+        setQuantity(state => state - 1);
+    }
+
+    function handleAddCoffetoCart(){
+        const coffeToAdd = {
+            ...coffe,
+            quantity
+        }
+        addCoffeToCart(coffeToAdd)
+    }
+
     return(
         <CoffeCardContainer>
             <img src={`/coffes/${coffe.photo}`}/>
@@ -40,8 +61,12 @@ export function CoffeCard({ coffe } : CoffeProps){
                     </TitleText>
                 </div>
                 <CardWrapper>
-                    <QuantityInput/>
-                    <button>
+                    <QuantityInput
+                        onIncrease={handleIncrease}
+                        onDecrease={handleDecrease}
+                        quantity={quantity}
+                    />
+                    <button onClick={handleAddCoffetoCart}>
                         <ShoppingCart size={22} weight="fill"/>
                     </button>
                 </CardWrapper>

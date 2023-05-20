@@ -7,6 +7,7 @@ export const CoffeCardContainer = styled.div`
     border-radius: 6px 36px 6px 36px;
     padding: 1.25rem;
     padding-top: 0;
+    margin-bottom: 2.5rem;
 
     display: flex;
     flex-direction: column;
