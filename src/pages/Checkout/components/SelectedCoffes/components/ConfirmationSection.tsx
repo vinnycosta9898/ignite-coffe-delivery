@@ -21,7 +21,7 @@ export function ConfirmationSection(){
                     R$ 29,90
                 </RegularText>
             </div>
-
+            
             <Button text="Confirmar Pedido"/>
         </ConfirmationSectionContainer>
     )
