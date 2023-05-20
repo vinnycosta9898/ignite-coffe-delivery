@@ -1,7 +1,12 @@
+import { CompleteOrderForm } from "./components/CompleteOrderForm";
+import { SelectedCoffes } from "./components/SelectedCoffes";
+import { CheckoutContainer } from "./styles";
+
 export function Checkout(){
     return(
-        <div>
-            Checkout
-        </div>
+        <CheckoutContainer className="container">
+            <CompleteOrderForm/>
+            <SelectedCoffes/>
+        </CheckoutContainer>
     )
 }
