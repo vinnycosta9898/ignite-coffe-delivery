@@ -7,7 +7,7 @@ interface InfoWithIconProps{
     iconBg: string;
 }
 
-export function InfoIncon({ icon, text, iconBg } : InfoWithIconProps){
+export function InfoIcon({ icon, text, iconBg } : InfoWithIconProps){
     return(
         <InfoWithIconContainer>
             <IconContainer iconBg={iconBg}>

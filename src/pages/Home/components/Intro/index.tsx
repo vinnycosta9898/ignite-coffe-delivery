@@ -4,7 +4,7 @@ import coffeImg from '../../../../assets/Coffe.svg'
 
 import { useTheme } from "styled-components"
 import { RegularText } from "../../../../components/Typegraphy/styles"
-import { InfoIncon } from "../../../../components/InfoIcon"
+import { InfoIcon } from "../../../../components/InfoIcon"
 
 export function Intro(){
     const { colors } = useTheme();
@@ -22,25 +22,25 @@ export function Intro(){
                     </section>
 
                     <BenefitsContainer>
-                        <InfoIncon 
+                        <InfoIcon 
                             icon={<ShoppingCart weight="fill"/>}
                             text="Compra simples e segura"
                             iconBg={colors["brand-yellow-dark"]}
                         />
 
-                        <InfoIncon 
+                        <InfoIcon 
                             icon={<Package weight="fill"/>}
                             text="Embalagem mantém o café intacto"
                             iconBg={colors["base-text"]}
                         />
 
-                        <InfoIncon 
+                        <InfoIcon 
                             icon={<Timer weight="fill"/>}
                             text="Entrega rápida e rastreada"
                             iconBg={colors["brand-yellow"]}
                         />
 
-                        <InfoIncon 
+                        <InfoIcon 
                             icon={<Coffee weight="fill"/>}
                             text="O café chega fresquinho até você"
                             iconBg={colors["brand-purple"]}
